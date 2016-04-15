@@ -1,0 +1,141 @@
+.gen-dimension {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.icon-dimension {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-wrapper {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 1070px;
+  background-color: #111418;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-links-wrapper {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+  padding-left: 10px;
+}
+.footer-links-wrapper ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+.footer-links-wrapper ul li {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 100px 0 0;
+  list-style: none;
+  float: left;
+}
+.footer-links-wrapper ul li:last-child {
+  margin-right: 0;
+}
+.footer-links-wrapper ul li a,
+.footer-links-wrapper ul li a:link,
+.footer-links-wrapper ul li a:hover {
+  color: #FFFFFF;
+  font-size: 14px;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+}
+.footer-social-icons-wrapper {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  float: right;
+}
+.footer-social-icons-wrapper a {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  border-right: solid #272C33 1px;
+  width: 45px;
+  margin-top: -2px;
+  outline: none;
+  text-decoration: none;
+}
+.footer-social-icons-wrapper a:last-child {
+  border-right: 0;
+}
+.footer-social-icons-wrapper a .icon-facebook {
+  background: url("../images/fb.png") no-repeat;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-social-icons-wrapper a .icon-facebook:hover {
+  background-position-y: -40px;
+}
+.footer-social-icons-wrapper a .icon-twitter {
+  background: url("../images/tw.png") no-repeat;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-social-icons-wrapper a .icon-twitter:hover {
+  background-position-y: -40px;
+}
+.footer-social-icons-wrapper a .icon-instagram {
+  background: url("../images/insta.png") no-repeat;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-social-icons-wrapper a .icon-instagram:hover {
+  background-position-y: -40px;
+}
+.footer-social-icons-wrapper a .icon-twitch {
+  background: url("../images/twitch.png") no-repeat;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-social-icons-wrapper a .icon-twitch:hover {
+  background-position-y: -40px;
+}
+.footer-social-icons-wrapper a .icon-youtube {
+  background: url("../images/youtube.png") no-repeat;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  width: 45px;
+  background-position-y: 0px;
+  display: inline-block;
+}
+.footer-social-icons-wrapper a .icon-youtube:hover {
+  background-position-y: -40px;
+}

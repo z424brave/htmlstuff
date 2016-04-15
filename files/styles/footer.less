@@ -1,0 +1,78 @@
+@color-bg: #111418;
+@color-divider: #272C33;
+
+@main-width: 1070px;
+@main-height: 40px;
+@icon-height: 40px;
+@icon-width: 45px;
+@icon-main-pos: 0px;
+@icon-hover-pos: -40px;
+
+@pad-base: 10px;
+
+
+.gen-dimension {
+  height: @main-height; line-height: @main-height; vertical-align: middle; display: inline-block;
+}
+
+.icon-dimension {
+  height: @icon-height; line-height: @main-height; vertical-align: middle; width: @icon-width; background-position-y: @icon-main-pos;display: inline-block;
+}
+
+
+
+.footer-wrapper{.gen-dimension; width: @main-width; background-color: @color-bg; margin-left: auto; margin-right: auto;}
+.footer-links-wrapper{
+  .gen-dimension; float: left; padding-left: @pad-base;
+  ul{
+    margin: 0; list-style: none; padding: 0; display: inline-block;
+    li{
+      .gen-dimension; margin: 0 100px 0 0; list-style: none; float: left;
+      &:last-child{margin-right: 0;}
+
+      a, a:link, a:hover{color: #FFFFFF; font-size: 14px; outline: none;  text-decoration: none; font-family: 'Roboto'; text-transform: uppercase;}
+
+    }
+
+
+  }
+}
+
+
+.footer-social-icons-wrapper{
+  .gen-dimension; float: right;
+
+  a {
+    .gen-dimension; border-right: solid #272C33 1px; width: @icon-width; margin-top: @icon-main-pos - 2; outline: none; text-decoration: none;
+    &:last-child{border-right: 0;}
+
+    .icon-facebook{
+      background: url("../images/fb.png") no-repeat; .icon-dimension;
+      &:hover{background-position-y: @icon-hover-pos;}
+    }
+
+    .icon-twitter{
+      background: url("../images/tw.png") no-repeat; .icon-dimension;
+      &:hover{background-position-y: @icon-hover-pos;}
+    }
+
+    .icon-instagram{
+      background: url("../images/insta.png") no-repeat; .icon-dimension;
+      &:hover{background-position-y: @icon-hover-pos;}
+    }
+
+    .icon-twitch{
+      background: url("../images/twitch.png") no-repeat; .icon-dimension;
+      &:hover{background-position-y: @icon-hover-pos;}
+    }
+
+    .icon-youtube{
+      background: url("../images/youtube.png") no-repeat; .icon-dimension;
+      &:hover{background-position-y: @icon-hover-pos;}
+    }
+
+  }
+
+
+}
+
