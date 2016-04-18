@@ -5,8 +5,10 @@
 @main-height: 40px;
 @icon-height: 40px;
 @icon-width: 45px;
-@icon-main-pos: 0px;
-@icon-hover-pos: -40px;
+@icon-main-pos-y: 0;
+@icon-main-pos-y: 0;
+@icon-hover-pos-x: 0;
+@icon-hover-pos-y: -40px;
 
 @pad-base: 10px;
 
@@ -16,7 +18,7 @@
 }
 
 .icon-dimension {
-  height: @icon-height; line-height: @main-height; vertical-align: middle; width: @icon-width; background-position-y: @icon-main-pos;display: inline-block;
+  height: @icon-height; line-height: @main-height; vertical-align: middle; width: @icon-width; background-position: @icon-hover-pos-x @icon-main-pos-y;display: inline-block;
 }
 
 
@@ -43,32 +45,32 @@
   .gen-dimension; float: right;
 
   a {
-    .gen-dimension; border-right: solid #272C33 1px; width: @icon-width; margin-top: @icon-main-pos - 2; outline: none; text-decoration: none;
+    .gen-dimension; border-right: solid #272C33 1px; width: @icon-width; margin-top: @icon-main-pos-y - 2; outline: none; text-decoration: none;
     &:last-child{border-right: 0;}
 
     .icon-facebook{
       background: url("../images/fb.png") no-repeat; .icon-dimension;
-      &:hover{background-position-y: @icon-hover-pos;}
+      &:hover{background-position: @icon-hover-pos-x  @icon-hover-pos-y;}
     }
 
     .icon-twitter{
       background: url("../images/tw.png") no-repeat; .icon-dimension;
-      &:hover{background-position-y: @icon-hover-pos;}
+      &:hover{background-position: @icon-hover-pos-x @icon-hover-pos-y;}
     }
 
     .icon-instagram{
       background: url("../images/insta.png") no-repeat; .icon-dimension;
-      &:hover{background-position-y: @icon-hover-pos;}
+      &:hover{background-position: @icon-hover-pos-x @icon-hover-pos-y;}
     }
 
     .icon-twitch{
       background: url("../images/twitch.png") no-repeat; .icon-dimension;
-      &:hover{background-position-y: @icon-hover-pos;}
+      &:hover{background-position: @icon-hover-pos-x @icon-hover-pos-y;}
     }
 
     .icon-youtube{
       background: url("../images/youtube.png") no-repeat; .icon-dimension;
-      &:hover{background-position-y: @icon-hover-pos;}
+      &:hover{background-position: @icon-hover-pos-x @icon-hover-pos-y;}
     }
 
   }
