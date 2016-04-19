@@ -102,6 +102,11 @@
   top: 80px;
   left: 219px;
 }
+.half-box a.video-link:hover,
+.half-box a:link.video-link:hover,
+.half-box a:hover.video-link:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
 .half-box div.content-box {
   display: inline-block;
   width: 513px;
@@ -118,6 +123,7 @@
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
   opacity: 0.7;
+  max-height: 240px;
 }
 .quarter-box {
   height: 240px;
@@ -194,6 +200,11 @@
   top: 80px;
   left: 83.66666667px;
 }
+.quarter-box a.video-link:hover,
+.quarter-box a:link.video-link:hover,
+.quarter-box a:hover.video-link:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
 .quarter-box img {
   width: 100%;
   top: 0;
@@ -205,6 +216,7 @@
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
   opacity: 0.7;
+  max-height: 240px;
 }
 .top-title {
   background: url("../images/tw-news-icon.png") left center no-repeat #2b2b2b;

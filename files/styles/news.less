@@ -87,10 +87,13 @@
     &.video-link:after{
       .video-overlay; left: (@half-width / 2) - (@trailer-icon-size / 2);
     }
+    &.video-link:hover{
+      background-color: rgba(0,0,0,0.85);
+    }
   }
   div.content-box{display: inline-block; width: @half-width; height: 100%;}
   img{
-    .img-base; max-width: @half-width; .alpha-bg;
+    .img-base; max-width: @half-width; .alpha-bg; max-height: @box-height;
   }
 }
 .quarter-box{
@@ -123,9 +126,12 @@
     &.video-link:after{
       .video-overlay; left: @quarter-width / 3;
     }
+    &.video-link:hover{
+      background-color: rgba(0,0,0,0.85);
+    }
   }
   img{
-    .img-base; max-width: @quarter-width; .alpha-bg;
+    .img-base; max-width: @quarter-width; .alpha-bg; max-height: @box-height;
   }
 
 }
