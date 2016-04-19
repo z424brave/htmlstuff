@@ -1,0 +1,137 @@
+@color-bg: #111418;
+@color-divider: #272C33;
+
+@main-width: 1070px;
+@main-height: 760px;
+@half-width: 513px;
+@quarter-width: 251px;
+@box-height: 240px;
+@icon-height: 40px;
+@icon-width: 45px;
+@icon-main-pos: 0px;
+@icon-hover-pos: -40px;
+@opacity:0.7;
+@opacity-other:70;
+@pad-base: 10px;
+@news-icon-width: 52;
+@news-icon-height: 42px;
+@news-status-height: 34px;
+@top-title-width: (100% * ((@quarter-width - @news-icon-width) / @quarter-width));
+@colour-white: #FFFFFF;
+@colour-news-top-title: #939393;
+@colour-news-top-title-bg: #2b2b2b;
+@colour-news-bg: #242424;
+@colour-status-bg: #181717;
+@colour-light-gold: #AB752E;
+@font-roboto: 'Roboto';
+@font-size-11: 11px;
+@font-size-12: 12px;
+@font-size-13: 13px;
+@trailer-icon-size: 75px;
+
+.roboto-thin{
+  font-family: @font-roboto; font-weight: 300;
+}
+
+.roboto-normal{
+  font-family: @font-roboto; font-weight: 400;
+}
+
+.roboto-bold{
+  font-family: @font-roboto; font-weight: 700;
+}
+
+.gen-dimension {
+  height: @main-height; line-height: @main-height; vertical-align: middle; display: inline-block;
+}
+
+.box-gen-dimension() {
+  height: @box-height; display: inline-block; padding: 0 @pad-base @pad-base 0; float: left; position: relative;
+}
+
+.img-base{
+  width: 100%; top:0; z-index: 0; position: absolute;
+}
+
+.link-base{outline: none; text-decoration: none;display: inline-block; position: relative;}
+
+.title-gen{
+     text-decoration: none; font-family: @font-roboto; text-transform: uppercase; margin: 0; position: relative; z-index: 1;
+}
+
+
+.title{
+  .title-gen; font-size: @font-size-11; color: @colour-white; padding: @pad-base 0 0 @pad-base;
+}
+
+.alpha-bg{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=@opacity-other); -moz-opacity: @opacity; -khtml-opacity: @opacity;opacity: @opacity;
+}
+
+.video-overlay{
+  content: url("../images/trailer-icon.png"); width: @trailer-icon-size; height: @trailer-icon-size; position: absolute; top: @box-height /3;
+}
+
+.news-wrapper{
+  width: @main-width; height: @main-height; background: url("../images/background.png") no-repeat; margin-left: auto; margin-right: auto;
+  padding: @pad-base 0 0 @pad-base; overflow-y: hidden;
+  & .news-content{
+    height: @main-height - 20; max-height: @main-height - 20; overflow-y: scroll;
+  }
+}
+
+.half-box{
+  .box-gen-dimension; width: @half-width;
+  a, a:link, a:hover{
+    .link-base;width: @half-width;
+    &.video-link:after{
+      .video-overlay; left: (@half-width / 2) - (@trailer-icon-size / 2);
+    }
+  }
+  div.content-box{display: inline-block; width: @half-width; height: 100%;}
+  img{
+    .img-base; max-width: @half-width; .alpha-bg;
+  }
+}
+.quarter-box{
+  .box-gen-dimension; width: @quarter-width;
+
+  .news-box{
+    display: inline-block; width: @quarter-width; height: 100%; background-color: @colour-news-bg;
+
+    .news-body{
+      padding: @pad-base * 4 0 0 @pad-base; height: @box-height - @news-status-height - @news-icon-height - (@pad-base * 4);
+      .sub-title{
+        .title-gen; color: @colour-light-gold; font-size: @font-size-13;
+      }
+      .news-text{
+        color: @colour-white; font-family: @font-roboto; font-size: @font-size-13; margin-top: @pad-base * 2;
+      }
+    }
+    .status{
+      background-color: @colour-status-bg; width: (100% * ((@quarter-width - 10) / @quarter-width)); display: inline-block; color: @colour-white; .title-gen; font-size: @font-size-11; padding-left: @pad-base; font-weight: 700; line-height: @news-status-height; vertical-align: middle;
+    }
+  }
+
+  div.content-box{
+    display: inline-block; width: @quarter-width; height: 100%;
+
+  }
+
+  a, a:link, a:hover{
+    .link-base; width: @quarter-width;
+    &.video-link:after{
+      .video-overlay; left: @quarter-width / 3;
+    }
+  }
+  img{
+    .img-base; max-width: @quarter-width; .alpha-bg;
+  }
+
+}
+
+.top-title{
+  background: url("../images/tw-news-icon.png") left center no-repeat @colour-news-top-title-bg; .title-gen; font-size: @font-size-11; color: @colour-news-top-title; padding: 0 0 0 @pad-base * 5 + 2; width: @top-title-width; height: @news-icon-height; line-height: @news-icon-height; vertical-align: middle;
+}
+
+
