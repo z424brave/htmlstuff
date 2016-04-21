@@ -16,7 +16,7 @@
 @news-icon-width: 52;
 @news-icon-height: 42px;
 @news-status-height: 34px;
-@top-title-width: (100% * ((@quarter-width - @news-icon-width) / @quarter-width));
+@top-title-width: (100% * ((@half-width - @news-icon-width) / @half-width));
 @colour-white: #FFFFFF;
 @colour-news-top-title: #939393;
 @colour-news-top-title-bg: #2b2b2b;
@@ -82,6 +82,24 @@
 
 .half-box{
   .box-gen-dimension; width: @half-width;
+
+  .news-box{
+    display: inline-block; width: @half-width; height: 100%; background-color: @colour-news-bg;
+
+    .news-body{
+      padding: @pad-base * 4 0 0 @pad-base; height: @box-height - @news-status-height - @news-icon-height - (@pad-base * 4);
+      .sub-title{
+        .title-gen; color: @colour-light-gold; font-size: @font-size-13;
+      }
+      .news-text{
+        color: @colour-white; font-family: @font-roboto; font-size: @font-size-13; margin-top: @pad-base * 2;
+      }
+    }
+    .status{
+      background-color: @colour-status-bg; width: (100% * ((@half-width - 10) / @half-width)); display: inline-block; color: @colour-white; .title-gen; font-size: @font-size-11; padding-left: @pad-base; font-weight: 700; line-height: @news-status-height; vertical-align: middle;
+    }
+  }
+
   a, a:link, a:hover{
     .link-base;width: @half-width;
     &.video-link:after{
