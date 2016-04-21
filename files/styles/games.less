@@ -1,0 +1,148 @@
+@color-bg: #111418;
+@color-divider: #272C33;
+
+@main-width: 1070px;
+@main-height: 760px;
+@main-background-image: url("../images/games/tw-game-bg.jpg");
+@slider-width: 1050px;
+@slider-height: 360px;
+@spacer-height: @main-height - @slider-height - @logo-height - (@pad-base * 2);
+@logo-height: 60px;
+@icon-height: 40px;
+@icon-width: 45px;
+@icon-main-pos: 0px;
+@icon-hover-pos: -40px;
+@opacity:0.7;
+@opacity-other:70;
+@pad-base: 10px;
+@news-icon-width: 52;
+@news-icon-height: 42px;
+@news-status-height: 34px;
+@colour-white: #FFFFFF;
+@colour-news-top-title: #939393;
+@colour-news-top-title-bg: #2b2b2b;
+@colour-news-bg: #242424;
+@colour-status-bg: #181717;
+@colour-light-gold: #AB752E;
+@colour-active-slide: #C0983E;
+@font-roboto: 'Roboto';
+@font-size-11: 11px;
+@font-size-12: 12px;
+@font-size-13: 13px;
+@trailer-icon-size: 75px;
+
+.roboto-thin{
+  font-family: @font-roboto; font-weight: 300;
+}
+
+.roboto-normal{
+  font-family: @font-roboto; font-weight: 400;
+}
+
+.roboto-bold{
+  font-family: @font-roboto; font-weight: 700;
+}
+
+.gen-dimension {
+  height: @main-height; line-height: @main-height; vertical-align: middle; display: inline-block;
+}
+
+.box-gen-dimension() {
+  height: @box-height; display: inline-block; padding: 0 @pad-base @pad-base 0; float: left; position: relative;
+}
+
+.img-base{
+  width: 100%; top:0; z-index: 0; position: absolute;
+}
+
+.link-base{outline: none; text-decoration: none;display: inline-block; position: relative;}
+
+.title-gen{
+     text-decoration: none; font-family: @font-roboto;
+}
+
+
+.title{
+  .title-gen; font-size: @font-size-11; color: @colour-white; padding: @pad-base 0 0 @pad-base;
+}
+
+
+.games-wrapper{
+  width: @main-width; height: @main-height; background: @main-background-image no-repeat; margin-left: auto; margin-right: auto;
+   overflow-y: hidden;
+  & .top-content{
+    height: @slider-height; width: @main-width; display: inline-block;
+    & .owl-carousel{
+      height: @slider-height; width: @main-width; display: inline-block;
+      & div.item{
+        position: relative; width: @main-width; height: @slider-height;
+
+        & img{
+          width: 100%; max-width: @main-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
+        }
+
+        & .slide-text{
+          width: (@slider-width - @pad-base * 4) /2; padding: @pad-base *3 @pad-base *3 @pad-base *2 @pad-base *3; height: @slider-height - @pad-base * 5; display: inline-block;
+          & > div{
+            width: 100%; display: inline-block;
+          }
+          & .game-top-title{
+            margin: 0 0 @pad-base * 23 0; .title-gen; color: @colour-white; .roboto-bold; font-size: @font-size-11; text-transform: uppercase;
+          }
+          & .game-main-title{
+            margin: 0 0 @pad-base 0; .title-gen; color: @colour-white; .roboto-thin; font-size: @font-size-11 * 2;
+          }
+          & .game-info{
+            margin: 0; .title-gen; color: @colour-white; .roboto-thin; font-size: @font-size-13;overflow: hidden; text-overflow: ellipsis; height: @pad-base * 3; width: 100%; display: inline-block;
+          }
+        }
+      }
+
+    }
+  }
+  & .bottom-content{
+    height: @main-height - @slider-height - @pad-base; width: @main-width - @pad-base * 2; display: inline-block; padding: 0 @pad-base @pad-base;
+    & .games-mode-spacer{
+      height: @spacer-height; width: @slider-width; display: inline-block;
+    }
+    & .games-mode-logo-box{
+      display: inline-block; text-align: right; padding-top: @pad-base; float: right;
+      & img{
+        width: 100%; height: @logo-height; max-height: @logo-height;
+      }
+    }
+  }
+}
+
+.owl-theme .owl-controls {
+  margin-top: @pad-base * -5;
+  position: relative;
+  text-align: right;
+  padding-right: @pad-base * 2;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: none repeat scroll 0 0 transparent;
+  border: 2px solid @colour-white;
+  border-radius: 50%;
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 10px;
+  filter: Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  border: 2px solid @colour-active-slide;
+  background: @colour-active-slide;
+  width: 9px;
+  height: 9px;
+  margin: 10px;
+  filter: Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+
