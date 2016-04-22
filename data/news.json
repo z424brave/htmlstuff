@@ -1,0 +1,93 @@
+{
+  "news": [
+    {
+      "top-title": "",
+      "title": "Total war: WarHammer - The chaos pack",
+      "sub-title": "",
+      "info": "",
+      "imgUrl": "images/twwh_chaos_featured.jpg",
+      "url": "https://www.totalwar.com/news/150826/high-king-thorgrim-grudgebearer-biography",
+      "status": "",
+      "video": false,
+      "textOnly": false
+    },
+    {
+      "top-title": "Total war: WarHammer",
+      "title": "",
+      "sub-title": "HIGH KING THORGRIM GRUDGEBEARER - BIOGRAPHY",
+      "info": "Today we're kicking off a new part of our Total War: WARHAMMER adventure ...",
+      "imgUrl": "",
+      "url": "https://www.totalwar.com/news/151211/black-fire-pass-walkthrough",
+      "status": "10 Hours ago",
+      "video": false,
+      "textOnly": true
+    },
+    {
+      "top-title": "Total war: WarHammer",
+      "title": "",
+      "sub-title": "HIGH KING THORGRIM GRUDGEBEARER - BIOGRAPHY",
+      "info": "Today we're kicking off a new part of our Total War: WARHAMMER adventure ...",
+      "imgUrl": "",
+      "url": "https://www.totalwar.com/news/150721/engine-trailer-karl-franz-empire",
+      "status": "10 Hours ago",
+      "video": false,
+      "textOnly": true
+    },
+    {
+      "top-title": "",
+      "title": "Total war: WarHammer - Vampire counts -in-engine cinematic trailer",
+      "sub-title": "",
+      "info": "",
+      "imgUrl": "images/news/tw-happer.jpg",
+      "url": "https://youtu.be/uj605sogy3I",
+      "status": "",
+      "video": true,
+      "textOnly": false
+    },
+    {
+      "top-title": "",
+      "title": "Total war: Atilla - The last roman campaign pack",
+      "sub-title": "",
+      "info": "",
+      "imgUrl": "images/news/tw-atilla-last-roman.jpg",
+      "url": "https://www.totalwar.com/news/150720/introducing-demigryphs",
+      "status": "",
+      "video": false,
+      "textOnly": false
+    },
+    {
+      "top-title": "Total war: WarHammer",
+      "title": "",
+      "sub-title": "HIGH KING THORGRIM GRUDGEBEARER - BIOGRAPHY",
+      "info": "Today we're kicking off a new part of our Total War: WARHAMMER adventure ...",
+      "imgUrl": "",
+      "url": "https://www.totalwar.com/news/150714/e3-press-coverage",
+      "status": "10 Hours ago",
+      "video": false,
+      "textOnly": true
+    },
+    {
+      "top-title": "",
+      "title": "New: Grimgor ironhide trailer",
+      "sub-title": "",
+      "info": "",
+      "imgUrl": "images/news/coming-soon-trailer.jpg",
+      "url": "https://www.totalwar.com/news/150413/art-total-war",
+      "status": "",
+      "video": false,
+      "textOnly": false
+    },
+    {
+      "top-title": "",
+      "title": "New: Total war atilla: age of Charlemagne out now!",
+      "sub-title": "",
+      "info": "",
+      "imgUrl": "images/news/attila_aoc.jpg",
+      "url": "https://youtu.be/RNOy63UZXvM",
+      "status": "",
+      "video": true,
+      "textOnly": false
+
+    }
+  ]
+}
