@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (grunt) {
     grunt.initConfig({
         less: {
@@ -33,7 +35,7 @@ module.exports = function (grunt) {
                     banner: '/*! TotalWar Launcher JS file */'
                 },
                 files: {
-                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','file/scripts/owl.carousel/*.js','files/scripts/scripts.js'],
+                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','files/scripts/owl.carousel/owl.carousel.min.js','files/scripts/scripts.js'],
                 }
             }
         },
@@ -82,9 +84,9 @@ module.exports = function (grunt) {
                         dest: "dist/footer.html"
                     },
                     {
-                        data: "data/game.json",
-                        template: "templates/game.mustache",
-                        dest: "dist/game.html"
+                        data: "data/games.json",
+                        template: "templates/games.mustache",
+                        dest: "dist/games.html"
                     },
                     {
                         data: "data/news.json",
@@ -93,7 +95,37 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        }
+        },
+        rsync: {
+            options: {
+                // these are my preferred arguments when using rsync
+                args: ['-avz', '--verbose', '--delete'],
+                // an array of files you'd like to exclude; usual suspects...
+                exclude: ['.git*', 'cache', 'logs'],
+                recursive: true
+            },
+            prod: {
+                options: {
+                    // the dir you want to sync, in this case the current dir
+                    src: 'dist',
+                    // where should it be synced to on the remote host?
+                    dest: '/var/www/twlauncher',
+                    // what's the creds and host
+                    host: 'samuel.ajetunmobi@ca'
+                }
+            },
+            dev: {
+                options: {
+                    // the dir you want to sync, in this case the current dir
+                    src: 'dist',
+                    // where should it be synced to on the remote host?
+                    dest: '/var/www/twlauncher',
+                }
+            }
+        },
+        clean: {
+            build: ['dist'],
+        },
     });
 
     grunt.loadNpmTasks('grunt-mustache-render');
@@ -102,6 +134,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-rsync');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', 'watch');
+    grunt.registerTask('dist', ['clean', 'mustache_render','less','cssmin','uglify', 'copy']);
+    grunt.registerTask('deploy', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'rsync:dev']);
 };

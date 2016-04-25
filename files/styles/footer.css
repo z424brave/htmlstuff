@@ -80,7 +80,7 @@
   border-right: 0;
 }
 .footer-social-icons-wrapper a .icon-facebook {
-  background: url("assets/images/fb.png") no-repeat;
+  background: url("../assets/images/fb.png") no-repeat;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;
@@ -92,7 +92,7 @@
   background-position: 0 -40px;
 }
 .footer-social-icons-wrapper a .icon-twitter {
-  background: url("assets/images/tw.png") no-repeat;
+  background: url("../assets/images/tw.png") no-repeat;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;
@@ -104,7 +104,7 @@
   background-position: 0 -40px;
 }
 .footer-social-icons-wrapper a .icon-instagram {
-  background: url("assets/images/insta.png") no-repeat;
+  background: url("../assets/images/insta.png") no-repeat;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;
@@ -116,7 +116,7 @@
   background-position: 0 -40px;
 }
 .footer-social-icons-wrapper a .icon-twitch {
-  background: url("assets/images/twitch.png") no-repeat;
+  background: url("../assets/images/twitch.png") no-repeat;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;
@@ -128,7 +128,7 @@
   background-position: 0 -40px;
 }
 .footer-social-icons-wrapper a .icon-youtube {
-  background: url("assets/images/youtube.png") no-repeat;
+  background: url("../assets/images/youtube.png") no-repeat;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;

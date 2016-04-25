@@ -2,10 +2,10 @@
 @color-divider: #272C33;
 @main-width: 1070px;
 @main-height: 760px;
-@main-background-image: url("assets/images/games/tw-game-bg.jpg");
+@main-background-image: url("/assets/images/games/tw-game-bg.jpg");
 @slider-width: 1050px;
 @slider-height: 360px;
-@spacer-height: @main-height - @slider-height - @logo-height - (@pad-base * 2);
+@spacer-height: @main-height - @slider-height - @logo-height - (@pad-base * 3);
 @logo-height: 60px;
 @icon-height: 40px;
 @icon-width: 45px;
@@ -69,18 +69,18 @@
   width: @main-width; height: @main-height; background: @main-background-image no-repeat; margin-left: auto; margin-right: auto;
    overflow-y: hidden;
   & .top-content{
-    height: @slider-height; width: @main-width; display: inline-block;
+    height: @slider-height; width: @slider-width; display: inline-block; margin: @pad-base @pad-base 0 @pad-base;
     & .owl-carousel{
-      height: @slider-height; width: @main-width; display: inline-block;
+      height: @slider-height; width: @slider-width; display: inline-block;
       & div.item{
-        position: relative; width: @main-width; height: @slider-height;
+        position: relative; width: @slider-width; height: @slider-height;
 
         & img{
-          width: 100%; max-width: @main-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
+          width: 100%; max-width: @slider-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
         }
 
         & .slide-text{
-          width: (@slider-width - @pad-base * 4) /2; padding: @pad-base *3 @pad-base *3 @pad-base *2 @pad-base *3; height: @slider-height - @pad-base * 5; display: inline-block;
+          width: (@slider-width - @pad-base * 4) /2; padding: @pad-base *2 @pad-base *3 @pad-base *2 @pad-base *3; height: @slider-height - @pad-base * 5; display: inline-block;
           &:before {
             content: " ";
             width: 100%;

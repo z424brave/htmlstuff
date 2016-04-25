@@ -55,7 +55,7 @@
   opacity: 0.7;
 }
 .video-overlay {
-  content: url("assets/images/trailer-icon.png");
+  content: url("/assets/images/trailer-icon.png");
   width: 75px;
   height: 75px;
   position: absolute;
@@ -64,7 +64,7 @@
 .news-wrapper {
   width: 1070px;
   height: 760px;
-  background: url("assets/images/background.png") no-repeat;
+  background: url("/assets/images/background.png") no-repeat;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 0 0 10px;
@@ -138,7 +138,7 @@
 .half-box a.video-link:after,
 .half-box a:link.video-link:after,
 .half-box a:hover.video-link:after {
-  content: url("assets/images/trailer-icon.png");
+  content: url("/assets/images/trailer-icon.png");
   width: 75px;
   height: 75px;
   position: absolute;
@@ -236,7 +236,7 @@
 .quarter-box a.video-link:after,
 .quarter-box a:link.video-link:after,
 .quarter-box a:hover.video-link:after {
-  content: url("assets/images/trailer-icon.png");
+  content: url("/assets/images/trailer-icon.png");
   width: 75px;
   height: 75px;
   position: absolute;
@@ -262,7 +262,7 @@
   max-height: 240px;
 }
 .top-title {
-  background: url("assets/images/tw-news-icon.png") left center no-repeat #2b2b2b;
+  background: url("/assets/images/tw-news-icon.png") left center no-repeat #2b2b2b;
   text-decoration: none;
   font-family: 'Roboto';
   text-transform: uppercase;

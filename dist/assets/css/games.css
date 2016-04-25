@@ -42,29 +42,30 @@
 .games-wrapper {
   width: 1070px;
   height: 760px;
-  background: url("assets/images/games/tw-game-bg.jpg") no-repeat;
+  background: url("/assets/images/games/tw-game-bg.jpg") no-repeat;
   margin-left: auto;
   margin-right: auto;
   overflow-y: hidden;
 }
 .games-wrapper .top-content {
   height: 360px;
-  width: 1070px;
+  width: 1050px;
   display: inline-block;
+  margin: 10px 10px 0 10px;
 }
 .games-wrapper .top-content .owl-carousel {
   height: 360px;
-  width: 1070px;
+  width: 1050px;
   display: inline-block;
 }
 .games-wrapper .top-content .owl-carousel div.item {
   position: relative;
-  width: 1070px;
+  width: 1050px;
   height: 360px;
 }
 .games-wrapper .top-content .owl-carousel div.item img {
   width: 100%;
-  max-width: 1070px;
+  max-width: 1050px;
   height: 360px;
   position: absolute;
   top: 0px;
@@ -72,7 +73,7 @@
 }
 .games-wrapper .top-content .owl-carousel div.item .slide-text {
   width: 505px;
-  padding: 30px 30px 20px 30px;
+  padding: 20px 30px 20px 30px;
   height: 310px;
   display: inline-block;
 }
@@ -128,7 +129,7 @@
   padding: 0 10px 10px;
 }
 .games-wrapper .bottom-content .games-mode-spacer {
-  height: 320px;
+  height: 310px;
   width: 1050px;
   display: inline-block;
 }
