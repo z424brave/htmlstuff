@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                     banner: '/*! TotalWar Launcher JS file */'
                 },
                 files: {
-                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','files/scripts/owl.carousel/owl.carousel.min.js','files/scripts/scripts.js'],
+                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','files/scripts/owl.carousel/*.min.js', 'files/scripts/venobox/*.min.js', 'files/scripts/scripts.js'],
                 }
             }
         },
@@ -43,8 +43,15 @@ module.exports = function (grunt) {
             images: {
                 expand:     true,
                 cwd:        'files/images',
-                src:        ['**/*.{png,jpg,svg}'],
+                src:        ['**/*.{png,jpg,svg,gif}'],
                 dest:       'dist/assets/images/'
+            },
+            venobox: {
+                expand:     true,
+                cwd:        'files/scripts/',
+                src:        ['**/*.{png,jpg,svg,gif}'],
+                dest:       'dist/assets/js/images/',
+                flatten: true
             }
         },
         watch: {
@@ -79,14 +86,20 @@ module.exports = function (grunt) {
                 },
                 files: [
                     {
-                        data: "data/footer.json",
+                        expand: true,
+                        cwd: "data/footer/",
+                        src: "*.json",
                         template: "templates/footer.mustache",
-                        dest: "dist/footer.html"
+                        dest: "dist/footer/",
+                        ext: '.html'
                     },
                     {
-                        data: "data/games.json",
+                        expand: true,
+                        cwd: "data/game/",
+                        src: "*.json",
                         template: "templates/games.mustache",
-                        dest: "dist/games.html"
+                        dest: "dist/game/",
+                        ext: '.html',
                     },
                     {
                         data: "data/news.json",
@@ -97,31 +110,32 @@ module.exports = function (grunt) {
             }
         },
         rsync: {
-            options: {
-                // these are my preferred arguments when using rsync
-                args: ['-avz', '--verbose', '--delete'],
-                // an array of files you'd like to exclude; usual suspects...
-                exclude: ['.git*', 'cache', 'logs'],
-                recursive: true
-            },
-            prod: {
+            deploy: {
+                files: 'dist/',
                 options: {
-                    // the dir you want to sync, in this case the current dir
-                    src: 'dist',
-                    // where should it be synced to on the remote host?
-                    dest: '/var/www/twlauncher',
-                    // what's the creds and host
-                    host: 'samuel.ajetunmobi@ca'
-                }
-            },
-            dev: {
-                options: {
-                    // the dir you want to sync, in this case the current dir
-                    src: 'dist',
-                    // where should it be synced to on the remote host?
-                    dest: '/var/www/twlauncher',
+                    user: "samuel.ajetunmobi",
+                    remoteBase: "/var/www/twlauncher",
+                    clean: "--delete"
                 }
             }
+        },
+        aws: grunt.file.readJSON('deploy-keys.json'), // Load deploy variables
+        aws_s3: {
+            options: {
+                accessKeyId: '<%= aws.AWSAccessKeyId %>',
+                secretAccessKey: '<%= aws.AWSSecretKey %>',
+                region: '<%= aws.AWSRegion %>',
+                uploadConcurrency: 5, // 5 simultaneous uploads
+                downloadConcurrency: 5 // 5 simultaneous downloads
+            },
+            production: {
+                options: {
+                    bucket: 'l2.totalwar.com',
+                },
+                files: [
+                    {expand: true, cwd: 'dist', src: ['**'], dest: '/'}
+                ]
+            },
         },
         clean: {
             build: ['dist'],
@@ -134,10 +148,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-rsync');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-rsync-2');
+    grunt.loadNpmTasks('grunt-aws-s3');
 
     grunt.registerTask('default', 'watch');
     grunt.registerTask('dist', ['clean', 'mustache_render','less','cssmin','uglify', 'copy']);
-    grunt.registerTask('deploy', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'rsync:dev']);
+    grunt.registerTask('deploy-dev', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'rsync']);
+    grunt.registerTask('deploy-prod', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'aws_s3']);
 };

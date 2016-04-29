@@ -12,4 +12,6 @@ $(document).ready(function(){
         autoWidth:true,
         autoplayHoverPause:true
     });
+
+    $('.venobox').venobox();
 });
