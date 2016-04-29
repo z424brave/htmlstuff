@@ -59,6 +59,11 @@
   font-weight: 300;
   text-transform: uppercase;
 }
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
 .footer-social-icons-wrapper {
   height: 40px;
   line-height: 40px;

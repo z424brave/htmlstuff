@@ -65,9 +65,14 @@
   .title-gen; font-size: @font-size-11; color: @colour-white; padding: @pad-base 0 0 @pad-base;
 }
 
+body{border: 0; margin: 0; padding: 0;}
+
 .games-wrapper{
-  width: @main-width; height: @main-height; background: @main-background-image no-repeat; margin-left: auto; margin-right: auto;
-   overflow-y: hidden;
+  //width: @main-width; height: @main-height; background: @main-background-image no-repeat; margin-left: auto; margin-right: auto;
+  width: @main-width; height: @main-height; margin-left: auto; margin-right: auto;  overflow-y: hidden;
+  & img.game-bg{
+    position: absolute; z-index: 0; height: 100%; max-height: @main-height; width: 100%; max-width: @main-width; outline: none;
+  }
   & .top-content{
     height: @slider-height; width: @slider-width; display: inline-block; margin: @pad-base @pad-base 0 @pad-base;
     & .owl-carousel{
