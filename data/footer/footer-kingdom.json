@@ -20,23 +20,23 @@
 
   "social-links": [
     {
-      "url": "http://www.facebook.com/TotalWar",
+      "url": "http://www.facebook.com/totalwarbattles",
       "class": "social-icon icon-facebook"
     },
     {
-      "url": "https://twitter.com/totalwar",
+      "url": "https://twitter.com/totalwarbattles",
       "class": "social-icon icon-twitter"
     },
     {
-      "url": "https://instagram.com/totalwarofficial",
+      "url": "https://instagram.com/totalwarbattles",
       "class": "social-icon icon-instagram"
     },
     {
-      "url": "http://www.twitch.tv/totalwarofficial",
+      "url": "http://www.twitch.tv/totalwarbattles",
       "class": "social-icon icon-twitch"
     },
     {
-      "url": "http://www.youtube.com/thecreativeassembly",
+      "url": "https://www.youtube.com/channel/UCELAp8eSrzm0j8QLMWyHWXA",
       "class": "social-icon icon-youtube"
     }
   ]

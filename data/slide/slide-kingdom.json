@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "top-title": "Out now",
+      "main-title": "Chaos Warriors Race Pack // Out Now",
+      "info": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
+      "imgUrl": "twwh_chaos_featured.jpg"
+    },
+    {
+      "top-title": "",
+      "main-title": "Chaos Warriors Race Pack 2",
+      "info": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
+      "imgUrl": "twwh_chaos_featured_2.jpg"
+    },
+    {
+      "top-title": "Out now",
+      "main-title": "Chaos Warriors Race Pack // Out Now 3",
+      "info": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
+      "imgUrl": "twwh_chaos_featured_3.jpg"
+    }
+    ]
+}

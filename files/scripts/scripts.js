@@ -14,4 +14,6 @@ $(document).ready(function(){
     });
 
     $('.venobox').venobox();
+
+    $('.scroll-pane').jScrollPane();
 });

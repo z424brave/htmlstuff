@@ -1,0 +1,32 @@
+
+[
+  {
+    "Title": "Total War: SHOGUN 2",
+    "Exe": "shogun2.exe",
+    "Dir": "Shogun2",
+    "Logo": "assets/logos/shogun2.png",
+    "Icon": "assets/gamelist/shogun2.png",
+    "Body": "game/shogun2.html",
+    "Foot": "footer/shogun2.html",
+    "SteamIds": {
+      "App": 34300,
+      "Ownership": 201271,
+      "Depots": [
+        34331,
+        34332,
+        34333,
+        201270
+      ],
+      "DLC": [
+        {
+          "Name": "dlc1",
+          "Id": xxxx
+        },
+        {
+          "Name": "dlc2",
+          "Id": xxxx
+        }
+      ]
+    }
+  }
+]

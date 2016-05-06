@@ -27,3 +27,7 @@ All the less files used in generating css files are in files/styles
 TO CHANGE OR ADD NEW SCRIPT
 ==============================
 The script file is in files/scripts
+
+
+To start auto build: from cmd line navigate to project root folder and type either: grunt or grunt watch then press enter button
+To run specific task i.e deploy-dev: grunt deploy-dev

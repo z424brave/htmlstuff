@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "top-title": "",
+      "main-title": "Visit Our Forums",
+      "info": "Join the Total War community and get the latest game news from our team",
+      "imgUrl": "forums.jpg"
+    },
+    {
+      "top-title": "",
+      "main-title": "/thecreativeassembly",
+      "info": "Check out our channel for instant updates across the Total War universe",
+      "imgUrl": "subscribe.jpg"
+    },
+    {
+      "top-title": "",
+      "main-title": "Shop Total War Official Merchandise",
+      "info": "Free delivery on all orders over £50",
+      "imgUrl": "merchandise.jpg"
+    }
+  ]
+}

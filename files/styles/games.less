@@ -1,9 +1,9 @@
-@color-bg: #111418;
-@color-divider: #272C33;
-@main-width: 1070px;
+@colour-bg: #111418;
+@colour-divider: #272C33;
+@main-width: 1070px - (@pad-base * 2);
 @main-height: 760px;
 @main-background-image: url("../images/games/tw-game-bg.jpg");
-@slider-width: 1050px;
+@slider-width: 1050px - (@pad-base * 2);
 @slider-height: 360px;
 @spacer-height: @main-height - @slider-height - @logo-height - (@pad-base * 3);
 @logo-height: 60px;
@@ -24,6 +24,7 @@
 @colour-status-bg: #181717;
 @colour-light-gold: #AB752E;
 @colour-active-slide: #C0983E;
+@colour-line: #a5a5a5;
 @font-roboto: 'Roboto';
 @font-size-11: 11px;
 @font-size-12: 12px;
@@ -74,14 +75,14 @@ body{border: 0; margin: 0; padding: 0;}
     position: absolute; z-index: 0; height: 100%; max-height: @main-height; width: 100%; max-width: @main-width; outline: none;
   }
   & .top-content{
-    height: @slider-height; width: @slider-width; display: inline-block; margin: @pad-base @pad-base 0 @pad-base;
+    height: @slider-height; width: @main-width; display: inline-block;
     & .owl-carousel{
-      height: @slider-height; width: @slider-width; display: inline-block;
+      height: @slider-height; width: @main-width; display: inline-block;
       & div.item{
-        position: relative; width: @slider-width; height: @slider-height;
+        position: relative; width: @main-width; height: @slider-height;
 
         & img{
-          width: 100%; max-width: @slider-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
+          width: 100%; max-width: @main-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
         }
 
         & .slide-text{
@@ -115,13 +116,13 @@ body{border: 0; margin: 0; padding: 0;}
     }
   }
   & .bottom-content{
-    height: @main-height - @slider-height - @pad-base; width: @main-width - @pad-base * 2; display: inline-block; padding: 0 @pad-base @pad-base;
+    height: @main-height - @slider-height; width: @main-width; display: inline-block;
     & .games-mode-spacer{
-      height: @spacer-height; width: @slider-width; display: inline-block;
+      height: @spacer-height; width: @main-width; display: inline-block; border-bottom: solid 1px @colour-line; position: relative;
     }
 
     & .games-mode-logo-box{
-      display: inline-block; text-align: right; padding-top: @pad-base; float: right;
+      display: inline-block; text-align: right; padding: @pad-base @pad-base @pad-base 0; float: right; position: relative;
       & img{
         width: 100%; height: @logo-height; max-height: @logo-height;
       }

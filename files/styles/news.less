@@ -1,6 +1,6 @@
 @color-bg: #111418;
 @color-divider: #272C33;
-@main-width: 1070px;
+@main-width: 1070px - (@pad-base * 2);
 @main-height: 760px;
 @half-width: 513px;
 @quarter-width: 251px;
@@ -22,6 +22,7 @@
 @colour-news-bg: #242424;
 @colour-status-bg: #181717;
 @colour-light-gold: #AB752E;
+@colour-scroll-bar: #465862;
 @font-roboto: 'Roboto';
 @font-size-11: 11px;
 @font-size-12: 12px;
@@ -74,8 +75,8 @@
 body{border: 0; margin: 0; padding: 0;}
 
 .news-wrapper{
-  width: @main-width - @pad-base; height: @main-height - @pad-base; background: url("../images/background.png") no-repeat; margin-left: auto; margin-right: auto;
-  padding: @pad-base 0 0 @pad-base; overflow-y: hidden;
+  width: @main-width; height: @main-height; background: url("../images/background.png") no-repeat; margin-left: auto; margin-right: auto;
+  overflow-y: hidden;
   & .news-content{
     height: @main-height - 20; max-height: @main-height - 20; overflow-y: scroll;
   }
@@ -157,6 +158,39 @@ body{border: 0; margin: 0; padding: 0;}
 
 .top-title{
   background: url("../images/tw-news-icon.png") left center no-repeat @colour-news-top-title-bg; .title-gen; font-size: @font-size-11; color: @colour-news-top-title; padding: 0 0 0 @pad-base * 5 + 2; width: @top-title-width; height: @news-icon-height; line-height: @news-icon-height; vertical-align: middle;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  height: @main-height - (@pad-base * 3);
+}
+::-webkit-scrollbar-track {
+  background-color: @colour-scroll-bar;
+  height: @main-height - (@pad-base * 3);
+}
+::-webkit-scrollbar-thumb{
+  background-color: @colour-light-gold;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: @colour-light-gold;
+}
+
+.jspVerticalBar {
+  width: 5px;
+  height: @main-height - (@pad-base * 3);
+}
+
+.jspTrack {
+  background-color: @colour-scroll-bar;
+  height: @main-height - (@pad-base * 3);
+}
+
+.jspDrag {
+  background-color: @colour-light-gold;
+}
+
+.jspDrag:hover {
+  background-color: @colour-light-gold;
 }
 
 

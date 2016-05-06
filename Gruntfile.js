@@ -1,6 +1,10 @@
 'use strict';
 
+
+
+
 module.exports = function (grunt) {
+
     grunt.initConfig({
         less: {
             options: {
@@ -24,7 +28,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'dist/assets/css/styles.min.css': ['files/scripts/**/*.css','dist/assets/css/*.css']
+                    'dist/assets/css/styles.min.css': ['files/scripts/**/*.css', 'files/scripts/jScrollPane/style/*.css', 'dist/assets/css/*.css']
                 }
             }
         },
@@ -35,7 +39,8 @@ module.exports = function (grunt) {
                     banner: '/*! TotalWar Launcher JS file */'
                 },
                 files: {
-                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','files/scripts/owl.carousel/*.min.js', 'files/scripts/venobox/*.min.js', 'files/scripts/scripts.js'],
+                    'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js','files/scripts/owl.carousel/*.min.js',
+                        'files/scripts/venobox/*.min.js', 'files/scripts/jScrollPane/script/*.js','files/scripts/scripts.js'],
                 }
             }
         },
@@ -56,11 +61,11 @@ module.exports = function (grunt) {
         },
         watch: {
             templates: {
-                files: ['templates/*.mustache'],
+                files: ['templates/**/*.mustache'],
                 tasks: ['mustache_render'],
             },
             data: {
-                files: ['data/*.json'],
+                files: ['data/**/*.json'],
                 tasks: ['mustache_render'],
             },
             styles: {
@@ -80,14 +85,47 @@ module.exports = function (grunt) {
             },
         },
         mustache_render: {
+            partials: {
+                options: {
+                    //directory: "templates/partials",
+                },
+                files: [
+
+                    {
+                        data: "data/slide/slide.json",
+                        template: "templates/partials/pt-slide.mustache",
+                        dest: "templates/partials/slide.mustache"
+                    },
+                    {
+                        data: "data/slide/slide-kingdom.json",
+                        template: "templates/partials/pt-slide-kingdom.mustache",
+                        dest: "templates/partials/slide-kingdom.mustache"
+                    },
+                    {
+                        data: "data/slide/slide-whammer.json",
+                        template: "templates/partials/pt-slide-whammer.mustache",
+                        dest: "templates/partials/slide-whammer.mustache"
+                    },
+                    {
+                        data: "data/footer/footer.json",
+                        template: "templates/partials/pt-footer.mustache",
+                        dest: "templates/partials/footer.mustache"
+                    },
+                    {
+                        data: "data/footer/footer-kingdom.json",
+                        template: "templates/partials/pt-footer-kingdom.mustache",
+                        dest: "templates/partials/footer-kingdom.mustache"
+                    }
+                ]
+            },
             all: {
                 options: {
-                    directory: "partials"
+                    directory: "templates/partials",
                 },
                 files: [
                     {
                         expand: true,
-                        cwd: "data/footer/",
+                        cwd: "data/game/",
                         src: "*.json",
                         template: "templates/footer.mustache",
                         dest: "dist/footer/",
@@ -102,6 +140,14 @@ module.exports = function (grunt) {
                         ext: '.html',
                     },
                     {
+                        expand: true,
+                        cwd: "data/game/",
+                        src: "*.json",
+                        template: "templates/manager.mustache",
+                        dest: "dist/manager/",
+                        ext: '.html',
+                    },
+                    {
                         data: "data/news.json",
                         template: "templates/news.mustache",
                         dest: "dist/news.html"
@@ -113,7 +159,7 @@ module.exports = function (grunt) {
             deploy: {
                 files: 'dist/',
                 options: {
-                    user: "samuel.ajetunmobi",
+                    //user: "samuel.ajetunmobi",
                     remoteBase: "/var/www/twlauncher",
                     clean: "--delete"
                 }
@@ -152,8 +198,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-rsync-2');
     grunt.loadNpmTasks('grunt-aws-s3');
 
+
     grunt.registerTask('default', 'watch');
-    grunt.registerTask('dist', ['clean', 'mustache_render','less','cssmin','uglify', 'copy']);
-    grunt.registerTask('deploy-dev', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'rsync']);
-    grunt.registerTask('deploy-prod', ['clean', 'mustache_render','less','cssmin','uglify', 'copy', 'aws_s3']);
+    grunt.registerTask('dist', ['clean', 'mustache_render:partials', 'mustache_render:all','less','cssmin','uglify', 'copy']);
+    grunt.registerTask('deploy-dev', ['clean','mustache_render:partials', 'mustache_render:all','less','cssmin','uglify', 'copy', 'rsync', 'clean']);
+    grunt.registerTask('deploy-prod', ['clean', 'mustache_render:partials', 'mustache_render:all','less','cssmin','uglify', 'copy', 'aws_s3', 'clean']);
+    grunt.registerTask('partials', ['mustache_render:partials']);
 };
