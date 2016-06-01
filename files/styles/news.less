@@ -1,7 +1,7 @@
 @color-bg: #111418;
 @color-divider: #272C33;
 @main-width: 1070px - (@pad-base * 2);
-@main-height: 760px;
+@main-height: 750px;
 @half-width: 513px;
 @quarter-width: 251px;
 @box-height: 240px;
@@ -84,6 +84,10 @@ body{border: 0; margin: 0; padding: 0;}
 
 .half-box{
   .box-gen-dimension; width: @half-width;
+
+  &:nth-child(even){
+    padding-right: 0;
+  }
 
   .news-box{
     display: inline-block; width: @half-width; height: 100%; background-color: @colour-news-bg;

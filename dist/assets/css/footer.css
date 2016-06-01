@@ -17,7 +17,7 @@
   line-height: 40px;
   vertical-align: middle;
   display: inline-block;
-  width: 1050px;
+  width: 1070px;
   background-color: #111418;
   margin-left: auto;
   margin-right: auto;
@@ -132,6 +132,9 @@ body {
 }
 .footer-social-icons-wrapper a .icon-twitch:hover {
   background-position: 0 -40px;
+}
+.footer-social-icons-wrapper a .icon-twitch.twitch-active {
+  background: url("../images/twitch-indicator-active-purple.png") no-repeat center;
 }
 .footer-social-icons-wrapper a .icon-youtube {
   background: url("../images/youtube.png") no-repeat;

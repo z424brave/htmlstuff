@@ -1,6 +1,6 @@
 @color-bg: #111418;
 @color-divider: #272C33;
-@main-width: 1070px - (@pad-base * 2);
+@main-width: 1070px;
 @main-height: 40px;
 @icon-height: 40px;
 @icon-width: 45px;
@@ -66,6 +66,10 @@ body{border: 0; margin: 0; padding: 0;}
     .icon-twitch{
       background: url("../images/twitch.png") no-repeat; .icon-dimension;
       &:hover{background-position: @icon-hover-pos-x @icon-hover-pos-y;}
+    }
+
+    .icon-twitch.twitch-active {
+      background: url("../images/twitch-indicator-active-purple.png") no-repeat center;
     }
 
     .icon-youtube{

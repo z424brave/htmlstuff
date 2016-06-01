@@ -11,8 +11,8 @@
   font-weight: 700;
 }
 .gen-dimension {
-  height: 760px;
-  line-height: 760px;
+  height: 750px;
+  line-height: 750px;
   vertical-align: middle;
   display: inline-block;
 }
@@ -46,7 +46,7 @@ body {
 }
 .games-wrapper {
   width: 1050px;
-  height: 760px;
+  height: 750px;
   margin-left: auto;
   margin-right: auto;
   overflow-y: hidden;
@@ -55,7 +55,7 @@ body {
   position: absolute;
   z-index: 0;
   height: 100%;
-  max-height: 760px;
+  max-height: 750px;
   width: 100%;
   max-width: 1050px;
   outline: none;
@@ -135,12 +135,12 @@ body {
   display: inline-block;
 }
 .games-wrapper .bottom-content {
-  height: 400px;
+  height: 390px;
   width: 1050px;
   display: inline-block;
 }
 .games-wrapper .bottom-content .games-mode-spacer {
-  height: 310px;
+  height: 300px;
   width: 1050px;
   display: inline-block;
   border-bottom: solid 1px #a5a5a5;

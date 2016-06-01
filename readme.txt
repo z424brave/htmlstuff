@@ -16,6 +16,7 @@ ADDING NEW IMAGES TO LAUNCHER
 ===============================
 To add images for games, copy the images to files/images/games
 For games background, copy the images to files/images/games/bg
+For games logo, copy the images to files/images/games/logo
 To add images for news, copy the images to files/images/news
 For any other images, copy the images to files/images
 
