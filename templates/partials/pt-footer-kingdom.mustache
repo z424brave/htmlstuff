@@ -1,0 +1,13 @@
+
+    <div class="footer-links-wrapper">
+        <ul>
+            {{#game-links}}
+                <li><a href="{{& url}}">{{title}}</a></li>
+            {{/game-links}}
+        </ul>
+    </div>
+    <div class="footer-social-icons-wrapper">
+        {{#social-links}}
+            <a href="{{& url}}"  target="_blank"><span class="{{class}}"></span></a>
+        {{/social-links}}
+    </div>

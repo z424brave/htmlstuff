@@ -1,0 +1,6 @@
+{{#each collections.blog}}
+    <article class="news">
+        <h3>{{title}}</h3>
+        <p>{{{contents}}}</p>
+    </article>
+{{/each}}

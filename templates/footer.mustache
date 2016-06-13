@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href='../assets/css/styles.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="footer-wrapper">
+    {{#footerKingdom}}
+        {{> footer-kingdom }}
+    {{/footerKingdom}}
+    {{^uniqueFooter}}
+        {{> footer }}
+    {{/uniqueFooter}}
+</div>
+</body>
+<script src="../assets/js/scripts.min.js"></script>
+</html>

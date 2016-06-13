@@ -1,8 +1,4 @@
 .idea
-build.js
 node_modules
 deploy-keys.json
-package.json
-src
-templates
 *.iml

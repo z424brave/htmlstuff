@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='assets/css/styles.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="news-wrapper">
+        <div class="news-content scroll-pane">
+            {{#news}}
+            <div class="half-box">
+                {{^textOnly}}
+                    {{^video}}
+                        <a href="{{& url}}" target="_blank" class="cta-link">
+                    {{/video}}
+                    {{#video}}
+                    <a href="{{& url}}"  data-type="youtube" data-autoplay="true" class="cta-link video-link venobox">
+                    {{/video}}
+                        <div class="content-box">
+                            <h3 class="title">{{title}}</h3>
+                            <img src="assets/images/news/{{& image}}">
+                        </div>
+                    </a>
+
+                {{/textOnly}}
+
+                {{#textOnly}}
+
+                        <div class="news-box">
+                            <a href="{{& url}}" target="_blank" class="cta-link">
+                                <h3 class="top-title">{{top-title}}</h3>
+                            </a>
+                            <div class="news-body">
+                                <h3 class="sub-title">{{sub-title}}</h3>
+                                <div class="news-text">
+                                    {{info}}
+                                </div>
+                            </div>
+                            <div class="status">{{status}}<span class="comments"></span></div>
+                        </div>
+
+                {{/textOnly}}
+            </div>
+            {{/news}}
+        </div>
+    </div>
+</body>
+<script src="assets/js/scripts.min.js"></script>
+</html>
