@@ -21,10 +21,8 @@ $(document).ready(function(){
      * Initialise Twitch.tv indicator
      */
     $.getJSON("https://api.twitch.tv/kraken/streams/totalwarofficial.json?callback=?", function(c) {
-        if (c.stream == null) {
-            $('.icon-twitch').removeClass('twitch-active').addClass('twitch-inactive').attr('title', 'Twitch channel [totalwarofficial] is not online.');
-        } else {
-            $('.icon-twitch').removeClass('twitch-inactive').addClass('twitch-active').attr('title', 'Twitch channel [totalwarofficial] is online now!');
+        if ((c.stream !== null) || false) {
+            $('.icon-twitch').addClass('twitch-active').attr('title', 'Twitch channel [totalwarofficial] is online now!');
         }
     });
 });
