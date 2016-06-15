@@ -3,3 +3,4 @@ node_modules
 deploy-keys.json
 *.iml
 /dist/
+/build/
