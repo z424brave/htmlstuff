@@ -1,13 +1,11 @@
-/**
- * Created by samuel.ajetunmobi on 15/04/16.
- */
+'use strict';
 
 const Metalsmith = require('metalsmith');
 const markdown = require('metalsmith-markdown');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const templates = require('metalsmith-templates');
-const json2md = require("json2md");
+// const json2md = require('json2md');
 
 Metalsmith(__dirname)
     .use(collections({
@@ -23,7 +21,7 @@ Metalsmith(__dirname)
     .use(permalinks({
         pattern: ':collection/:title'
     }))
-    .use(markdown())
+    .use(markdown({}))
     .use(templates('handlebars'))
     .destination('./build')
     .build(function (err) {
