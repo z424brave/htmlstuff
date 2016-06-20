@@ -1,0 +1,8 @@
+{
+  "logoUrl": "kingdom.png",
+  "bgImg": "kingdoms.png",
+  "slideKingdom": "slide-kingdom",
+  "footerKingdom": "footer-kingdom",
+  "uniqueSlide": true,
+  "uniqueFooter": true
+}
