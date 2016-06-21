@@ -1,32 +1,47 @@
 <html>
 <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />-->
+    <!--<meta http-equiv="Pragma" content="no-cache" />-->
+    <!--<meta http-equiv="Expires" content="0" />-->
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link href='../assets/css/styles.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div class="games-wrapper">
-        <img class="game-bg" src="../assets/images/games/bg/{{& bgImg}}">
-        <div class="top-content">
-            {{#slideKingdom}}
-                {{> slide-kingdom}}
-            {{/slideKingdom}}
-            {{#slideWarHammer}}
-                {{> slide-whammer}}
-            {{/slideWarHammer}}
-            {{^uniqueSlide}}
-                {{> slide}}
-            {{/uniqueSlide}}
-        </div>
-        <div class="bottom-content">
-            <div class="games-mode-spacer"></div>
-            <div class="games-mode-logo-box">
-                <img src="../assets/images/games/logo/{{& logoUrl}}">
-            </div>
+<div class="games-wrapper">
+    <div class="top-content">
+        {{#slideKingdom}}
+            {{> slide-kingdom}}
+        {{/slideKingdom}}
+        {{#slideWarHammer}}
+            {{> slide-whammer}}
+        {{/slideWarHammer}}
+        {{^uniqueSlide}}
+            {{> slide}}
+        {{/uniqueSlide}}
+    </div>
+    <div class="bottom-content" style="background-image: url('../assets/images/games/bg/{{& bgImg}}')">
+        <div class="games-mode-spacer"></div>
+        <div class="games-mode-logo-box">
+            <img src="../assets/images/games/logo/{{& logoUrl}}">
         </div>
     </div>
-</body>
+</div>
+
 <script src="../assets/js/scripts.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            items: 3,
+            loop: true,
+            autoplay: true,
+            //autoplayTimeout:1000,
+            dots: true,
+            autoHeight: true,
+            autoWidth: true,
+            autoplayHoverPause: true
+        });
+    });
+</script>
+
+</body>
 </html>

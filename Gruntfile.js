@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'dist/assets/js/scripts.min.js': ['files/scripts/jquery.min.js', 'files/scripts/owl.carousel/*.min.js',
-                        'files/scripts/venobox/*.min.js', 'files/scripts/jScrollPane/script/*.js', 'files/scripts/scripts.js']
+                        'files/scripts/venobox/*.min.js', 'files/scripts/jScrollPane/script/*.js']
                 }
             }
         },

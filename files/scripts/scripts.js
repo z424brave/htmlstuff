@@ -10,19 +10,13 @@ $(document).ready(function(){
         dots: true,
         autoHeight: true,
         autoWidth:true,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        lazyLoad : true
     });
 
     $('.venobox').venobox();
 
     $('.scroll-pane').jScrollPane();
 
-    /**
-     * Initialise Twitch.tv indicator
-     */
-    $.getJSON("https://api.twitch.tv/kraken/streams/totalwarofficial.json?callback=?", function(c) {
-        if ((c.stream !== null) || false) {
-            $('.icon-twitch').addClass('twitch-active').attr('title', 'Twitch channel [totalwarofficial] is online now!');
-        }
-    });
+    
 });
