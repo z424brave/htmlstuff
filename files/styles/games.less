@@ -2,7 +2,7 @@
 @colour-divider: #272C33;
 @main-width: 1070px - (@pad-base * 2);
 @main-height: 750px;
-@main-background-image: url("../images/games/tw-game-bg.jpg");
+@main-background-image: "../images/games/bg/default.jpg";
 @slider-width: 1050px - (@pad-base * 2);
 @slider-height: 360px;
 @spacer-height: @main-height - @slider-height - @logo-height - (@pad-base * 3);
@@ -11,8 +11,8 @@
 @icon-width: 45px;
 @icon-main-pos: 0px;
 @icon-hover-pos: -40px;
-@opacity:0.7;
-@opacity-other:70;
+@opacity: 0.7;
+@opacity-other: 70;
 @pad-base: 10px;
 @news-icon-width: 52;
 @news-icon-height: 42px;
@@ -31,100 +31,185 @@
 @font-size-13: 13px;
 @trailer-icon-size: 75px;
 
-.roboto-thin{
-  font-family: @font-roboto; font-weight: 300;
+.roboto-thin {
+  font-family: @font-roboto;
+  font-weight: 300;
 }
 
-.roboto-normal{
-  font-family: @font-roboto; font-weight: 400;
+.roboto-normal {
+  font-family: @font-roboto;
+  font-weight: 400;
 }
 
-.roboto-bold{
-  font-family: @font-roboto; font-weight: 700;
+.roboto-bold {
+  font-family: @font-roboto;
+  font-weight: 700;
 }
 
 .gen-dimension {
-  height: @main-height; line-height: @main-height; vertical-align: middle; display: inline-block;
+  height: @main-height;
+  line-height: @main-height;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .box-gen-dimension() {
-  height: @box-height; display: inline-block; padding: 0 @pad-base @pad-base 0; float: left; position: relative;
+  height: @box-height;
+  display: inline-block;
+  padding: 0 @pad-base @pad-base 0;
+  float: left;
+  position: relative;
 }
 
-.img-base{
-  width: 100%; top:0; z-index: 0; position: absolute;
+.img-base {
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  position: absolute;
 }
 
-.link-base{outline: none; text-decoration: none;display: inline-block; position: relative;}
-
-.title-gen{
-     text-decoration: none; font-family: @font-roboto;
+.link-base {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }
 
-
-.title{
-  .title-gen; font-size: @font-size-11; color: @colour-white; padding: @pad-base 0 0 @pad-base;
+.title-gen {
+  text-decoration: none;
+  font-family: @font-roboto;
 }
 
-body{border: 0; margin: 0; padding: 0;}
+.title {
+  .title-gen;
+  font-size: @font-size-11;
+  color: @colour-white;
+  padding: @pad-base 0 0 @pad-base;
+}
 
-.games-wrapper{
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.games-wrapper {
   //width: @main-width; height: @main-height; background: @main-background-image no-repeat; margin-left: auto; margin-right: auto;
-  width: @main-width; height: @main-height; margin-left: auto; margin-right: auto;  overflow-y: hidden;
-  & img.game-bg{
-    position: absolute; z-index: 0; height: 100%; max-height: @main-height; width: 100%; max-width: @main-width; outline: none;
-  }
-  & .top-content{
-    height: @slider-height; width: @main-width; display: inline-block;
-    & .owl-carousel{
-      height: @slider-height; width: @main-width; display: inline-block;
-      & div.item{
-        position: relative; width: @main-width; height: @slider-height;
+  width: @main-width;
+  height: @main-height;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+  & .top-content {
+    height: @slider-height;
+    width: @main-width;
+    display: inline-block;
+    overflow: hidden;
 
-        & img{
-          width: 100%; max-width: @main-width; height: @slider-height; position: absolute; top: 0px; z-index: -100;
-        }
+    & .owl-carousel {
+      height: @slider-height;
+      width: @main-width;
+      display: inline-block;
 
-        & .slide-text{
-          width: (@slider-width - @pad-base * 4) /2; padding: @pad-base *2 @pad-base *3 @pad-base *2 @pad-base *3; height: @slider-height - @pad-base * 5; display: inline-block;
-          &:before {
-            content: " ";
+      & .owl-item {
+
+        & div.item {
+          position: relative;
+          width: @main-width;
+          height: @slider-height;
+
+          & img {
             width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: -99;
-            top: 0;
-            left: 0;
-            background-color: rgba(0,0,0,0.3);
-            opacity: 0.2;
+            max-width: @main-width;
+            height: @slider-height;
+            position: absolute;
+            top: 0px;
+            z-index: -100;
           }
-          & > div{
-            width: 100%; display: inline-block;
-          }
-          & .game-top-title{
-            margin: 0; .title-gen; color: @colour-white; .roboto-bold; font-size: @font-size-11; text-transform: uppercase;
-          }
-          & .game-main-title{
-            margin: @pad-base * 23 0 @pad-base 0; .title-gen; color: @colour-white; .roboto-thin; font-size: @font-size-11 * 2;
-          }
-          & .game-info{
-            margin: 0; .title-gen; color: @colour-white; .roboto-thin; font-size: @font-size-13;overflow: hidden; text-overflow: ellipsis; height: @pad-base * 3; width: 100%; display: inline-block;
+
+          & .slide-text {
+            width: (@slider-width - @pad-base * 4) /2;
+            padding: @pad-base *2 @pad-base *3 @pad-base *2 @pad-base *3;
+            height: @slider-height - @pad-base * 5;
+            display: inline-block;
+            &:before {
+              content: " ";
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              z-index: -99;
+              top: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.3);
+              opacity: 0.2;
+            }
+            & > div {
+              width: 100%;
+              display: inline-block;
+            }
+            & .game-top-title {
+              margin: 0;
+              .title-gen;
+              color: @colour-white;
+              .roboto-bold;
+              font-size: @font-size-11;
+              text-transform: uppercase;
+            }
+            & .game-main-title {
+              margin: @pad-base * 23 0 @pad-base 0;
+              .title-gen;
+              color: @colour-white;
+              .roboto-thin;
+              font-size: @font-size-11 * 2;
+            }
+            & .game-info {
+              margin: 0;
+              .title-gen;
+              color: @colour-white;
+              .roboto-thin;
+              font-size: @font-size-13;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              height: @pad-base * 3;
+              width: 100%;
+              display: inline-block;
+            }
           }
         }
+
       }
 
+
+
     }
   }
-  & .bottom-content{
-    height: @main-height - @slider-height; width: @main-width; display: inline-block;
-    & .games-mode-spacer{
-      height: @spacer-height; width: @main-width; display: inline-block; border-bottom: solid 1px @colour-line; position: relative;
+  & .bottom-content {
+    height: @main-height - @slider-height;
+    width: @main-width;
+    display: inline-block;
+
+    background: url("@{main-background-image}") 0 0  no-repeat;
+    background-size: cover;
+
+
+    & .games-mode-spacer {
+      height: @spacer-height;
+      width: @main-width;
+      display: inline-block;
+      border-bottom: solid 1px @colour-line;
+      position: relative;
     }
 
-    & .games-mode-logo-box{
-      display: inline-block; text-align: right; padding: @pad-base @pad-base @pad-base 0; float: right; position: relative;
-      & img{
-        width: 100%; height: @logo-height; max-height: @logo-height;
+    & .games-mode-logo-box {
+      display: inline-block;
+      text-align: right;
+      padding: @pad-base @pad-base @pad-base 0;
+      float: right;
+      position: relative;
+      & img {
+        width: 100%;
+        height: @logo-height;
+        max-height: @logo-height;
       }
     }
   }
