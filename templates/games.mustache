@@ -9,20 +9,32 @@
 <body>
 <div class="games-wrapper">
     <div class="top-content">
-        {{#slideKingdom}}
-            {{> slide-kingdom}}
-        {{/slideKingdom}}
-        {{#slideWarHammer}}
-            {{> slide-whammer}}
-        {{/slideWarHammer}}
-        {{^uniqueSlide}}
+	<div class="owl-carousel">
+        {{#slides}}
+			<!--  game specific slide selection -->
+        <div class="item">
+            <img src="{{& imgUrl}}">
+            <div class="slide-text">
+                <h3 class="game-top-title">{{top-title}}</h3>
+                <div>
+                    <h3 class="game-main-title">{{main-title}}</h3>
+                    <div class="game-info">
+                        {{info}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/slides}}
+        {{^slides}}
+		    <!--  default slide selection -->
             {{> slide}}
-        {{/uniqueSlide}}
+        {{/slides}}
     </div>
-    <div class="bottom-content" style="background-image: url('../assets/images/games/bg/{{& bgImg}}')">
+	</div>
+    <div class="bottom-content" style="background-image: url('{{& bgImg}}')">
         <div class="games-mode-spacer"></div>
         <div class="games-mode-logo-box">
-            <img src="../assets/images/games/logo/{{& logoUrl}}">
+            <img src="{{& logoUrl}}">
         </div>
     </div>
 </div>

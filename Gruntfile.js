@@ -43,12 +43,12 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            images: {
+/*             images: {
                 expand: true,
-                cwd: 'files/images',
-                src: ['**/*.{png,jpg,svg,gif}'],
-                dest: 'dist/assets/images/'
-            },
+                cwd: 'files/images', */
+                // src: ['**/*.{png,jpg,svg,gif}'],
+/*                 dest: 'dist/assets/images/'
+            },  */
             venobox: {
                 expand: true,
                 cwd: 'files/scripts/',
@@ -163,8 +163,8 @@ module.exports = function (grunt) {
                 }
             }
         },
-        aws: grunt.file.readJSON('deploy-keys.json'), // Load deploy variables
-        aws_s3: {
+/*         aws: grunt.file.readJSON('deploy-keys.json'), // Load deploy variables */
+/*         aws_s3: {
             options: {
                 accessKeyId: '<%= aws.AWSAccessKeyId %>',
                 secretAccessKey: '<%= aws.AWSSecretKey %>',
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'dist', src: ['**'], dest: '/'}
                 ]
             }
-        },
+        }, */
         clean: {
             build: ['dist']
         },
@@ -204,11 +204,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-rsync-2');
-    grunt.loadNpmTasks('grunt-aws-s3');
+/*     grunt.loadNpmTasks('grunt-aws-s3'); */
 
 
     grunt.registerTask('default', 'watch');
     grunt.registerTask('dist', ['clean', 'mustache_render:partials', 'mustache_render:all', 'less', 'cssmin', 'uglify', 'copy']);
+    grunt.registerTask('deploy-dev-dk', ['clean', 'mustache_render:partials', 'mustache_render:all', 'less', 'cssmin', 'uglify', 'copy']);
     grunt.registerTask('deploy-dev', ['clean', 'mustache_render:partials', 'mustache_render:all', 'less', 'cssmin', 'uglify', 'copy', 'rsync', 'clean']);
     grunt.registerTask('deploy-prod', ['clean', 'mustache_render:partials', 'mustache_render:all', 'less', 'cssmin', 'uglify', 'copy', 'aws_s3', 'clean']);
     grunt.registerTask('partials', ['mustache_render:partials']);

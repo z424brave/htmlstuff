@@ -7,7 +7,7 @@
       "imgUrl": "twwh_chaos_featured.jpg"
     },
     {
-      "top-title": "",
+      "top-title": "2nd slide",
       "main-title": "Chaos Warriors Race Pack 2",
       "info": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
       "imgUrl": "twwh_chaos_featured_2.jpg"
@@ -17,6 +17,12 @@
       "main-title": "Chaos Warriors Race Pack // Out Now 3",
       "info": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
       "imgUrl": "twwh_chaos_featured_3.jpg"
+    },
+    {
+      "top-title": "4th slide",
+      "main-title": "A 4th slide",
+      "info": "Titan could do this : Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
+      "imgUrl": "smile.jpg"	  
     }
     ]
 }
